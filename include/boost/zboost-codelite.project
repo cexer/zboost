@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="zboost" InternalType="Library">
+  <Plugins/>
+  <Description/>
+  <File Name="bind.hpp"/>
+  <VirtualDirectory Name="config">
+    <VirtualDirectory Name="abi">
+      <File Name="config/abi/borland_prefix.hpp"/>
+      <File Name="config/abi/borland_suffix.hpp"/>
+      <File Name="config/abi/msvc_prefix.hpp"/>
+      <File Name="config/abi/msvc_suffix.hpp"/>
+    </VirtualDirectory>
+    <File Name="config/abi_prefix.hpp"/>
+    <File Name="config/abi_suffix.hpp"/>
+    <File Name="config/auto_link.hpp"/>
+    <VirtualDirectory Name="compiler">
+      <File Name="config/compiler/borland.hpp"/>
+      <File Name="config/compiler/clang.hpp"/>
+      <File Name="config/compiler/codegear.hpp"/>
+      <File Name="config/compiler/comeau.hpp"/>
+      <File Name="config/compiler/common_edg.hpp"/>
+      <File Name="config/compiler/compaq_cxx.hpp"/>
+      <File Name="config/compiler/cray.hpp"/>
+      <File Name="config/compiler/digitalmars.hpp"/>
+      <File Name="config/compiler/gcc.hpp"/>
+      <File Name="config/compiler/gcc_xml.hpp"/>
+      <File Name="config/compiler/greenhills.hpp"/>
+      <File Name="config/compiler/hp_acc.hpp"/>
+      <File Name="config/compiler/intel.hpp"/>
+      <File Name="config/compiler/kai.hpp"/>
+      <File Name="config/compiler/metrowerks.hpp"/>
+      <File Name="config/compiler/mpw.hpp"/>
+      <File Name="config/compiler/nvcc.hpp"/>
+      <File Name="config/compiler/pathscale.hpp"/>
+      <File Name="config/compiler/pgi.hpp"/>
+      <File Name="config/compiler/sgi_mipspro.hpp"/>
+      <File Name="config/compiler/sunpro_cc.hpp"/>
+      <File Name="config/compiler/vacpp.hpp"/>
+      <File Name="config/compiler/visualc.hpp"/>
+      <File Name="config/compiler/xlcpp.hpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="no_tr1">
+      <File Name="config/no_tr1/cmath.hpp"/>
+      <File Name="config/no_tr1/complex.hpp"/>
+      <File Name="config/no_tr1/functional.hpp"/>
+      <File Name="config/no_tr1/memory.hpp"/>
+      <File Name="config/no_tr1/utility.hpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="platform">
+      <File Name="config/platform/aix.hpp"/>
+      <File Name="config/platform/amigaos.hpp"/>
+      <File Name="config/platform/beos.hpp"/>
+      <File Name="config/platform/bsd.hpp"/>
+      <File Name="config/platform/cloudabi.hpp"/>
+      <File Name="config/platform/cray.hpp"/>
+      <File Name="config/platform/cygwin.hpp"/>
+      <File Name="config/platform/haiku.hpp"/>
+      <File Name="config/platform/hpux.hpp"/>
+      <File Name="config/platform/irix.hpp"/>
+      <File Name="config/platform/linux.hpp"/>
+      <File Name="config/platform/macos.hpp"/>
+      <File Name="config/platform/qnxnto.hpp"/>
+      <File Name="config/platform/solaris.hpp"/>
+      <File Name="config/platform/symbian.hpp"/>
+      <File Name="config/platform/vms.hpp"/>
+      <File Name="config/platform/vxworks.hpp"/>
+      <File Name="config/platform/win32.hpp"/>
+    </VirtualDirectory>
+    <File Name="config/posix_features.hpp"/>
+    <File Name="config/requires_threads.hpp"/>
+    <File Name="config/select_compiler_config.hpp"/>
+    <File Name="config/select_platform_config.hpp"/>
+    <File Name="config/select_stdlib_config.hpp"/>
+    <VirtualDirectory Name="stdlib">
+      <File Name="config/stdlib/dinkumware.hpp"/>
+      <File Name="config/stdlib/libcomo.hpp"/>
+      <File Name="config/stdlib/libcpp.hpp"/>
+      <File Name="config/stdlib/libstdcpp3.hpp"/>
+      <File Name="config/stdlib/modena.hpp"/>
+      <File Name="config/stdlib/msl.hpp"/>
+      <File Name="config/stdlib/roguewave.hpp"/>
+      <File Name="config/stdlib/sgi.hpp"/>
+      <File Name="config/stdlib/stlport.hpp"/>
+      <File Name="config/stdlib/vacpp.hpp"/>
+    </VirtualDirectory>
+    <File Name="config/suffix.hpp"/>
+    <File Name="config/user.hpp"/>
+    <File Name="config/warning_disable.hpp"/>
+  </VirtualDirectory>
+  <File Name="config.hpp"/>
+  <File Name="cstdint.hpp"/>
+  <VirtualDirectory Name="detail">
+    <File Name="detail/IAbstract.h"/>
+    <File Name="detail/QAssert.h"/>
+    <File Name="detail/QAtomic.h"/>
+    <File Name="detail/QAtomicBuilder.h"/>
+    <File Name="detail/QAtomicDetector.h"/>
+    <File Name="detail/QAtomicGccImpl.h"/>
+    <File Name="detail/QAtomicWindowsImpl.h"/>
+    <File Name="detail/QBaseTypes.h"/>
+    <File Name="detail/QBindCaller.h"/>
+    <File Name="detail/QBindParams.h"/>
+    <File Name="detail/QBindResolver.h"/>
+    <File Name="detail/QBooleanable.h"/>
+    <File Name="detail/QCalculatable.h"/>
+    <File Name="detail/QConfigCompiler.h"/>
+    <File Name="detail/QConfigCompilerMSVC.h"/>
+    <File Name="detail/QConfigPlatform.h"/>
+    <File Name="detail/QConfigProcessor.h"/>
+    <File Name="detail/QConfigRuntime.h"/>
+    <File Name="detail/QConfigWindows.h"/>
+    <File Name="detail/QFunctionCaller.h"/>
+    <File Name="detail/QFunctionCallerTemplate.h"/>
+    <File Name="detail/QFunctionPointerTraitsTemplate.h"/>
+    <File Name="detail/QFunctionTemplate.h"/>
+    <File Name="detail/QFunctionTraisBase.h"/>
+    <File Name="detail/QFunctionTraits.h"/>
+    <File Name="detail/QFunctionTraitsTemplate.h"/>
+    <File Name="detail/QIntTypes.h"/>
+    <File Name="detail/QKernelConfig.h"/>
+    <File Name="detail/QMacros.h"/>
+    <File Name="detail/QMethodTraitsTemplate1.h"/>
+    <File Name="detail/QMethodTraitsTemplate2.h"/>
+    <File Name="detail/QMethodWraper.h"/>
+    <File Name="detail/QNoop.h"/>
+    <File Name="detail/QPointerOf.h"/>
+    <File Name="detail/QSharedForward.h"/>
+    <File Name="detail/QSharedHolder.h"/>
+    <File Name="detail/QTraits.h"/>
+    <File Name="detail/QTypeInfo.h"/>
+    <File Name="detail/QTypeList.h"/>
+    <File Name="detail/QWindowsCommon.h"/>
+  </VirtualDirectory>
+  <File Name="enable_shared_from_this.hpp"/>
+  <File Name="function.hpp"/>
+  <File Name="limits.hpp"/>
+  <VirtualDirectory Name="predef">
+    <VirtualDirectory Name="architecture">
+      <File Name="predef/architecture/alpha.h"/>
+      <File Name="predef/architecture/arm.h"/>
+      <File Name="predef/architecture/blackfin.h"/>
+      <File Name="predef/architecture/convex.h"/>
+      <File Name="predef/architecture/ia64.h"/>
+      <File Name="predef/architecture/m68k.h"/>
+      <File Name="predef/architecture/mips.h"/>
+      <File Name="predef/architecture/parisc.h"/>
+      <File Name="predef/architecture/ppc.h"/>
+      <File Name="predef/architecture/pyramid.h"/>
+      <File Name="predef/architecture/rs6k.h"/>
+      <File Name="predef/architecture/sparc.h"/>
+      <File Name="predef/architecture/superh.h"/>
+      <File Name="predef/architecture/sys370.h"/>
+      <File Name="predef/architecture/sys390.h"/>
+      <VirtualDirectory Name="x86">
+        <File Name="predef/architecture/x86/32.h"/>
+        <File Name="predef/architecture/x86/64.h"/>
+      </VirtualDirectory>
+      <File Name="predef/architecture/x86.h"/>
+      <File Name="predef/architecture/z.h"/>
+    </VirtualDirectory>
+    <File Name="predef/architecture.h"/>
+    <VirtualDirectory Name="compiler">
+      <File Name="predef/compiler/borland.h"/>
+      <File Name="predef/compiler/clang.h"/>
+      <File Name="predef/compiler/comeau.h"/>
+      <File Name="predef/compiler/compaq.h"/>
+      <File Name="predef/compiler/diab.h"/>
+      <File Name="predef/compiler/digitalmars.h"/>
+      <File Name="predef/compiler/dignus.h"/>
+      <File Name="predef/compiler/edg.h"/>
+      <File Name="predef/compiler/ekopath.h"/>
+      <File Name="predef/compiler/gcc.h"/>
+      <File Name="predef/compiler/gcc_xml.h"/>
+      <File Name="predef/compiler/greenhills.h"/>
+      <File Name="predef/compiler/hp_acc.h"/>
+      <File Name="predef/compiler/iar.h"/>
+      <File Name="predef/compiler/ibm.h"/>
+      <File Name="predef/compiler/intel.h"/>
+      <File Name="predef/compiler/kai.h"/>
+      <File Name="predef/compiler/llvm.h"/>
+      <File Name="predef/compiler/metaware.h"/>
+      <File Name="predef/compiler/metrowerks.h"/>
+      <File Name="predef/compiler/microtec.h"/>
+      <File Name="predef/compiler/mpw.h"/>
+      <File Name="predef/compiler/palm.h"/>
+      <File Name="predef/compiler/pgi.h"/>
+      <File Name="predef/compiler/sgi_mipspro.h"/>
+      <File Name="predef/compiler/sunpro.h"/>
+      <File Name="predef/compiler/tendra.h"/>
+      <File Name="predef/compiler/visualc.h"/>
+      <File Name="predef/compiler/watcom.h"/>
+    </VirtualDirectory>
+    <File Name="predef/compiler.h"/>
+    <VirtualDirectory Name="detail">
+      <File Name="predef/detail/_cassert.h"/>
+      <File Name="predef/detail/_exception.h"/>
+      <File Name="predef/detail/comp_detected.h"/>
+      <File Name="predef/detail/endian_compat.h"/>
+      <File Name="predef/detail/os_detected.h"/>
+      <File Name="predef/detail/platform_detected.h"/>
+      <File Name="predef/detail/test.h"/>
+      <File Name="predef/detail/test_def.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="hardware">
+      <VirtualDirectory Name="simd">
+        <VirtualDirectory Name="arm">
+          <File Name="predef/hardware/simd/arm/versions.h"/>
+        </VirtualDirectory>
+        <File Name="predef/hardware/simd/arm.h"/>
+        <VirtualDirectory Name="ppc">
+          <File Name="predef/hardware/simd/ppc/versions.h"/>
+        </VirtualDirectory>
+        <File Name="predef/hardware/simd/ppc.h"/>
+        <VirtualDirectory Name="x86">
+          <File Name="predef/hardware/simd/x86/versions.h"/>
+        </VirtualDirectory>
+        <File Name="predef/hardware/simd/x86.h"/>
+        <VirtualDirectory Name="x86_amd">
+          <File Name="predef/hardware/simd/x86_amd/versions.h"/>
+        </VirtualDirectory>
+        <File Name="predef/hardware/simd/x86_amd.h"/>
+      </VirtualDirectory>
+      <File Name="predef/hardware/simd.h"/>
+    </VirtualDirectory>
+    <File Name="predef/hardware.h"/>
+    <VirtualDirectory Name="language">
+      <File Name="predef/language/objc.h"/>
+      <File Name="predef/language/stdc.h"/>
+      <File Name="predef/language/stdcpp.h"/>
+    </VirtualDirectory>
+    <File Name="predef/language.h"/>
+    <VirtualDirectory Name="library">
+      <VirtualDirectory Name="c">
+        <File Name="predef/library/c/_prefix.h"/>
+        <File Name="predef/library/c/gnu.h"/>
+        <File Name="predef/library/c/uc.h"/>
+        <File Name="predef/library/c/vms.h"/>
+        <File Name="predef/library/c/zos.h"/>
+      </VirtualDirectory>
+      <File Name="predef/library/c.h"/>
+      <VirtualDirectory Name="std">
+        <File Name="predef/library/std/_prefix.h"/>
+        <File Name="predef/library/std/cxx.h"/>
+        <File Name="predef/library/std/dinkumware.h"/>
+        <File Name="predef/library/std/libcomo.h"/>
+        <File Name="predef/library/std/modena.h"/>
+        <File Name="predef/library/std/msl.h"/>
+        <File Name="predef/library/std/roguewave.h"/>
+        <File Name="predef/library/std/sgi.h"/>
+        <File Name="predef/library/std/stdcpp3.h"/>
+        <File Name="predef/library/std/stlport.h"/>
+        <File Name="predef/library/std/vacpp.h"/>
+      </VirtualDirectory>
+      <File Name="predef/library/std.h"/>
+    </VirtualDirectory>
+    <File Name="predef/library.h"/>
+    <File Name="predef/make.h"/>
+    <VirtualDirectory Name="os">
+      <File Name="predef/os/aix.h"/>
+      <File Name="predef/os/amigaos.h"/>
+      <File Name="predef/os/android.h"/>
+      <File Name="predef/os/beos.h"/>
+      <VirtualDirectory Name="bsd">
+        <File Name="predef/os/bsd/bsdi.h"/>
+        <File Name="predef/os/bsd/dragonfly.h"/>
+        <File Name="predef/os/bsd/free.h"/>
+        <File Name="predef/os/bsd/net.h"/>
+        <File Name="predef/os/bsd/open.h"/>
+      </VirtualDirectory>
+      <File Name="predef/os/bsd.h"/>
+      <File Name="predef/os/cygwin.h"/>
+      <File Name="predef/os/haiku.h"/>
+      <File Name="predef/os/hpux.h"/>
+      <File Name="predef/os/ios.h"/>
+      <File Name="predef/os/irix.h"/>
+      <File Name="predef/os/linux.h"/>
+      <File Name="predef/os/macos.h"/>
+      <File Name="predef/os/os400.h"/>
+      <File Name="predef/os/qnxnto.h"/>
+      <File Name="predef/os/solaris.h"/>
+      <File Name="predef/os/unix.h"/>
+      <File Name="predef/os/vms.h"/>
+      <File Name="predef/os/windows.h"/>
+    </VirtualDirectory>
+    <File Name="predef/os.h"/>
+    <VirtualDirectory Name="other">
+      <File Name="predef/other/endian.h"/>
+    </VirtualDirectory>
+    <File Name="predef/other.h"/>
+    <VirtualDirectory Name="platform">
+      <File Name="predef/platform/mingw.h"/>
+      <File Name="predef/platform/windows_desktop.h"/>
+      <File Name="predef/platform/windows_phone.h"/>
+      <File Name="predef/platform/windows_runtime.h"/>
+      <File Name="predef/platform/windows_store.h"/>
+    </VirtualDirectory>
+    <File Name="predef/platform.h"/>
+    <File Name="predef/version.h"/>
+    <File Name="predef/version_number.h"/>
+  </VirtualDirectory>
+  <File Name="predef.h"/>
+  <File Name="shared_ptr.hpp"/>
+  <File Name="smart_ptr.hpp"/>
+  <File Name="weak_ptr.hpp"/>
+  <Dependencies Name="x32|dll-debug"/>
+  <Dependencies Name="x64|dll-debug"/>
+  <Dependencies Name="x32|dll-release"/>
+  <Dependencies Name="x64|dll-release"/>
+  <Dependencies Name="x32|lib-debug"/>
+  <Dependencies Name="x64|lib-debug"/>
+  <Dependencies Name="x32|lib-release"/>
+  <Dependencies Name="x64|lib-release"/>
+  <Settings Type="Static Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="x32|dll-debug" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-g" C_Options="-m32;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m32">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86/libzboost-d.a" IntermediateDirectory="../../tmp/x32/dll-debug/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x64|dll-debug" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-g" C_Options="-m64;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86_64/libzboost-d.a" IntermediateDirectory="../../tmp/x64/dll-debug/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x32|dll-release" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-O3" C_Options="-m32;-O3" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="NDEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m32">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86/libzboost.a" IntermediateDirectory="../../tmp/x32/dll-release/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x64|dll-release" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-O3" C_Options="-m64;-O3" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="NDEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86_64/libzboost.a" IntermediateDirectory="../../tmp/x64/dll-release/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x32|lib-debug" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-g" C_Options="-m32;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m32">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86/libzboost-sd.a" IntermediateDirectory="../../tmp/x32/lib-debug/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x64|lib-debug" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-g" C_Options="-m64;-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86_64/libzboost-sd.a" IntermediateDirectory="../../tmp/x64/lib-debug/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x32|lib-release" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-O3" C_Options="-m32;-O3" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="NDEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m32">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86/libzboost-s.a" IntermediateDirectory="../../tmp/x32/lib-release/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="x64|lib-release" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Static Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-O3" C_Options="-m64;-O3" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <Preprocessor Value="NDEBUG"/>
+        <Preprocessor Value="PRE_STATIC"/>
+      </Compiler>
+      <Linker Required="yes" Options="-m64">
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../../lib/macosx-x86_64/libzboost-s.a" IntermediateDirectory="../../tmp/x64/lib-release/zboost" Command="" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="no" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <CustomBuild Enabled="no"/>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

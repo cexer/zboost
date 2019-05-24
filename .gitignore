@@ -1,0 +1,10 @@
+tmp/
+*.pdb
+*.ilk
+bin/**/*-d.*
+bin/**/*-sd.*
+lib/**/*-d.*
+lib/**/*-sd.*
+*.ncb
+*.vcproj*.user
+*.suo

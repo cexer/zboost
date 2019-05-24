@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="zboost" Database="" SWTLW="No">
+  <Project Name="helloworld" Path="tests/helloworld/helloworld-codelite.project"/>
+  <Project Name="zboost" Path="include/boost/zboost-codelite.project"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="x32|dll-debug" Selected="yes">
+      <Project Name="helloworld" ConfigName="x32|dll-debug"/>
+      <Project Name="zboost" ConfigName="x32|dll-debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x64|dll-debug" Selected="yes">
+      <Project Name="helloworld" ConfigName="x64|dll-debug"/>
+      <Project Name="zboost" ConfigName="x64|dll-debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x32|dll-release" Selected="yes">
+      <Project Name="helloworld" ConfigName="x32|dll-release"/>
+      <Project Name="zboost" ConfigName="x32|dll-release"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x64|dll-release" Selected="yes">
+      <Project Name="helloworld" ConfigName="x64|dll-release"/>
+      <Project Name="zboost" ConfigName="x64|dll-release"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x32|lib-debug" Selected="yes">
+      <Project Name="helloworld" ConfigName="x32|lib-debug"/>
+      <Project Name="zboost" ConfigName="x32|lib-debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x64|lib-debug" Selected="yes">
+      <Project Name="helloworld" ConfigName="x64|lib-debug"/>
+      <Project Name="zboost" ConfigName="x64|lib-debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x32|lib-release" Selected="yes">
+      <Project Name="helloworld" ConfigName="x32|lib-release"/>
+      <Project Name="zboost" ConfigName="x32|lib-release"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="x64|lib-release" Selected="yes">
+      <Project Name="helloworld" ConfigName="x64|lib-release"/>
+      <Project Name="zboost" ConfigName="x64|lib-release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
