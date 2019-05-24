@@ -41,6 +41,6 @@ zboost
 
 ## 授权
 
-boost 部分仍遵照 boost 授权，详见项目目录下 LICENSE_1_0.boost.txt
-其余部分使用 Anti-996 授权，详见项目目录下 LICENSE_1_0.anti996.txt
+- boost 部分仍遵照 boost 授权，详见项目目录下 LICENSE_1_0.boost.txt
+- 其余部分使用 Anti-996 授权，详见项目目录下 LICENSE_1_0.anti996.txt
 
