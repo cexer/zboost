@@ -13,14 +13,14 @@
 ////////////////////////////////////////////////////////////////////////////
 
 
-
 template <class T>
-struct QFunctionTraits : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits : public QFunctionTraitsBase
 {
     //typedef typename T::Params Params;
     //typedef typename T::Return Return;
     //typedef typename T::Wrapper Wrapper;
 };
+
 
 template <class T>
 struct QFunctionPointerTraits : public QFunctionTraitsBase
@@ -75,16 +75,37 @@ struct QFunctionPointerTraits : public QFunctionTraitsBase
 
 
 
+
 template<class F>
-struct IsFunction : public QBoolean<QFunctionTraits<F>::isFunction>
+struct IsFunctionPrototype : public QBoolean<QFunctionPrototypeTraits<F>::isFunction>
 {};
 
 template<class F>
 struct IsFunctionPointer : public QBoolean<QFunctionPointerTraits<F>::isFunctionPointer>
 {};
 
+
+template <class T, bool isfun, bool isfunptr>
+struct QFunctionTraitsImpl : public QFunctionTraitsBase
+{};
+
+template <class T>
+struct QFunctionTraitsImpl<T,true,false>
+    : public QFunctionPrototypeTraits<T>
+{};
+
+template <class T>
+struct QFunctionTraitsImpl<T,false,true>
+    : public QFunctionPointerTraits<T>
+{};
+
+template <class T>
+struct QFunctionTraits
+    : public QFunctionTraitsImpl<T, IsFunctionPrototype<T>::value, IsFunctionPointer<T>::value>
+{};
+
 template<class F>
-struct IsFunctionOrFunctionPtr : public LogicOr< IsFunction<F>, IsFunctionPointer<F> >
+struct IsFunctionPrototypeOrPointer : public LogicOr< IsFunctionPrototype<F>, IsFunctionPointer<F> >
 {};
 
 template<class F>
@@ -92,19 +113,9 @@ struct IsMethodPointer : public QBoolean<QFunctionTraits<F>::isMethodPointer>
 {};
 
 template<class F>
-struct IsRawCallable : public LogicOr< IsFunctionOrFunctionPtr<F>, IsMethodPointer<F> >
+struct IsRawCallable : public LogicOr< IsFunctionPrototypeOrPointer<F>, IsMethodPointer<F> >
 {};
 
-template<class F>
-struct IsKnownCallable : public QBoolean<QFunctionTraits<F>::isKnownCallable>
-{};
-
-template<class F>
-struct GetRawCallableWrapper
-{
-    typedef typename IfElse<IsFunction<F>, QFunctionTraits<F>, QFunctionPointerTraits<F> >::Result Traits;
-    typedef typename Traits::Wrapper Result;
-};
 
 
 

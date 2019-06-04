@@ -1,6 +1,6 @@
 //premake.vpath=boost/detail
 template <class R>
-struct QFunctionTraits<R __CALLING ()> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING ()> : public QFunctionTraitsBase
 {
     enum
     {
@@ -18,7 +18,7 @@ struct QFunctionTraits<R __CALLING ()> : public QFunctionTraitsBase
 
 
 template <class R, class A>
-struct QFunctionTraits<R __CALLING (A)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -36,7 +36,7 @@ struct QFunctionTraits<R __CALLING (A)> : public QFunctionTraitsBase
 };
 
 template <class R, class A0, class A1>
-struct QFunctionTraits<R __CALLING (A0,A1)> : public QFunctionTraitsBase 
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1)> : public QFunctionTraitsBase 
 {
     enum
     {
@@ -54,7 +54,7 @@ struct QFunctionTraits<R __CALLING (A0,A1)> : public QFunctionTraitsBase
 };
 
 template <class R, class A0, class A1, class A2>
-struct QFunctionTraits<R __CALLING (A0,A1,A2)> : public QFunctionTraitsBase 
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2)> : public QFunctionTraitsBase 
 {
     enum
     {
@@ -72,7 +72,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2)> : public QFunctionTraitsBase
 };
 
 template <class R, class A0, class A1, class A2, class A3>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3)> : public QFunctionTraitsBase 
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3)> : public QFunctionTraitsBase 
 {
     enum
     {
@@ -91,7 +91,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3)> : public QFunctionTraitsBase
 
 
 template <class R, class A0, class A1, class A2, class A3, class A4>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -109,7 +109,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4)> : public QFunctionTraitsBas
 };
 
 template <class R, class A0, class A1, class A2, class A3, class A4, class A5>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4,A5)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -127,7 +127,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5)> : public QFunctionTraits
 };
 
 template <class R, class A0, class A1, class A2, class A3, class A4, class A5, class A6>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -146,7 +146,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6)> : public QFunctionTra
 
 
 template <class R, class A0, class A1, class A2, class A3, class A4, class A5, class A6, class A7>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -164,7 +164,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7)> : public QFunction
 };
 
 template <class R, class A0, class A1, class A2, class A3, class A4, class A5, class A6, class A7, class A8>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7,A8)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7,A8)> : public QFunctionTraitsBase
 {
     enum
     {
@@ -182,7 +182,7 @@ struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7,A8)> : public QFunct
 };
 
 template <class R, class A0, class A1, class A2, class A3, class A4, class A5, class A6, class A7, class A8, class A9>
-struct QFunctionTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7,A8,A9)> : public QFunctionTraitsBase
+struct QFunctionPrototypeTraits<R __CALLING (A0,A1,A2,A3,A4,A5,A6,A7,A8,A9)> : public QFunctionTraitsBase
 {
     enum
     {

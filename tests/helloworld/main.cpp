@@ -64,12 +64,12 @@ int main(int argc, char** argv)
     f = test_f0;
     f();
 
-    printf("%d\n", IsFunction<void (void)>::value);
-    printf("%d\n", IsFunction<void (*)(void)>::value);
+    printf("%d\n", IsFunctionPrototype<void (void)>::value);
+    printf("%d\n", IsFunctionPrototype<void (*)(void)>::value);
     printf("%d\n", IsFunctionPointer<void (*)(void)>::value);
     printf("%d\n", IsFunctionPointer<void (void)>::value);
-    printf("%d\n", IsFunctionOrFunctionPtr<void (void)>::value);
-    printf("%d\n", IsFunctionOrFunctionPtr<void (*)(void)>::value);
+    printf("%d\n", IsFunctionPrototypeOrPointer<void (void)>::value);
+    printf("%d\n", IsFunctionPrototypeOrPointer<void (*)(void)>::value);
 
     test_call_f0(test_f0);
 

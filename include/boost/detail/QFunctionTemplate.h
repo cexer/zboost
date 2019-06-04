@@ -148,7 +148,7 @@ protected:
     template<class F>
     void _constructCase(_F_isRawCallable, const F& f)
     {
-		typedef typename GetRawCallableWrapper<F>::Result Wrapper;
+		typedef typename QFunctionTraits<F>::Wrapper Wrapper;
         m_impl.reset(new QFunctionFunctionImplN<R,Wrapper __COMMA __Tn>(f));
     }
 
