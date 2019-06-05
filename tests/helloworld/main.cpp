@@ -46,6 +46,11 @@ void test_f0()
     printf("test_f0\n");
 }
 
+void test_f1(int v)
+{
+    printf("test_f1, v=%d\n", v);
+}
+
 void test_call_f0(const boost::function<void ()>& f)
 {
     f();
@@ -72,6 +77,9 @@ int main(int argc, char** argv)
     printf("%d\n", IsFunctionPrototypeOrPointer<void (*)(void)>::value);
 
     test_call_f0(test_f0);
+
+    f = boost::bind(&test_f1, 1);
+    f();
 
     f = boost::bind(&Test::fun_0, t);
     f();
