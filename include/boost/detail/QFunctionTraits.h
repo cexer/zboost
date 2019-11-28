@@ -85,21 +85,21 @@ struct IsFunctionPointer : public QBoolean<QFunctionPointerTraits<F>::isFunction
 {};
 
 
-template <class T, bool isfun, bool isfunptr>
+template<class T, bool isfun, bool isfunptr>
 struct QFunctionTraitsImpl : public QFunctionTraitsBase
 {};
 
-template <class T>
+template<class T>
 struct QFunctionTraitsImpl<T,true,false>
     : public QFunctionPrototypeTraits<T>
 {};
 
-template <class T>
+template<class T>
 struct QFunctionTraitsImpl<T,false,true>
     : public QFunctionPointerTraits<T>
 {};
 
-template <class T>
+template<class T>
 struct QFunctionTraits
     : public QFunctionTraitsImpl<T, IsFunctionPrototype<T>::value, IsFunctionPointer<T>::value>
 {};
@@ -115,6 +115,125 @@ struct IsMethodPointer : public QBoolean<QFunctionTraits<F>::isMethodPointer>
 template<class F>
 struct IsRawCallable : public LogicOr< IsFunctionPrototypeOrPointer<F>, IsMethodPointer<F> >
 {};
+
+
+template<class R, class PS>
+struct QFunctionTraitsFromParams;
+
+template<class R, class PS, int pn=QTypeListLength<PS>::value>
+struct GetFunctionTraitsBase;
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,0>
+{
+    typedef QFunctionTraits<R ()> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,1>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef QFunctionTraits<R (P0)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,2>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef QFunctionTraits<R (P0,P1)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,3>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef QFunctionTraits<R (P0,P1,P2)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,4>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef QFunctionTraits<R (P0,P1,P2,P3)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,5>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef typename QTypeListAt<PS,4>::Result P4;
+    typedef QFunctionTraits<R (P0,P1,P2,P3,P4)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,6>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef typename QTypeListAt<PS,4>::Result P4;
+    typedef typename QTypeListAt<PS,5>::Result P5;
+    typedef QFunctionTraits<R (P0,P1,P2,P3,P4,P5)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,7>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef typename QTypeListAt<PS,4>::Result P4;
+    typedef typename QTypeListAt<PS,5>::Result P5;
+    typedef typename QTypeListAt<PS,6>::Result P6;
+    typedef QFunctionTraits<R (P0,P1,P2,P3,P4,P5,P6)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,8>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef typename QTypeListAt<PS,4>::Result P4;
+    typedef typename QTypeListAt<PS,5>::Result P5;
+    typedef typename QTypeListAt<PS,6>::Result P6;
+    typedef typename QTypeListAt<PS,7>::Result P7;
+    typedef QFunctionTraits<R (P0,P1,P2,P3,P4,P5,P6,P7)> Result;
+};
+
+template<class R, class PS>
+struct GetFunctionTraitsBase<R,PS,9>
+{
+    typedef typename QTypeListAt<PS,0>::Result P0;
+    typedef typename QTypeListAt<PS,1>::Result P1;
+    typedef typename QTypeListAt<PS,2>::Result P2;
+    typedef typename QTypeListAt<PS,3>::Result P3;
+    typedef typename QTypeListAt<PS,4>::Result P4;
+    typedef typename QTypeListAt<PS,5>::Result P5;
+    typedef typename QTypeListAt<PS,6>::Result P6;
+    typedef typename QTypeListAt<PS,7>::Result P7;
+    typedef typename QTypeListAt<PS,7>::Result P8;
+    typedef QFunctionTraits<R (P0,P1,P2,P3,P4,P5,P6,P7,P8)> Result;
+};
+
+template<class R, class PS>
+struct QFunctionTraitsFromParams
+    : public GetFunctionTraitsBase<R,PS>::Result
+{
+
+};
 
 
 
