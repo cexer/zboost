@@ -19,17 +19,14 @@
 
 #if defined(QHAS_WINDOWS_ATOMIC)
 #   include "QAtomicWindowsImpl.h"
-	typedef QAtomicWindowsImpl QAtomicPlatformImpl;
-	typedef qwinodows_atomic_t qatomic_t;
+	typedef qwindows_atomic_t qatomic_t;
 
 #elif defined(QHAS_GCC_ATOMIC)
 #   include "QAtomicGccImpl.h"
-	typedef QAtomicGccImpl QAtomicPlatformImpl;
 	typedef qgcc_atomic_t qatomic_t;
 
 #elif defined(QHAS_GCC_X64_ATOMIC)
 #   include "QAtomicGccX86Impl.h"
-	typedef QAtomicGccX86Impl QAtomicPlatformImpl;
 	typedef qgcc_x86_atomic_t qatomic_t;
 
 #else
@@ -37,8 +34,7 @@
 #endif
 
 
-class QAtomic : public QAtomicPlatformImpl
-			   , public QIncreasable<QAtomic,qatomic_t>
+class QAtomic : public QIncreasable<QAtomic,qatomic_t>
                , public QDecreasable<QAtomic,qatomic_t>
                , public QAtomicMulFromCASAndFetch<QAtomic,qatomic_t>
                , public QAtomicDivFromCASAndFetch<QAtomic,qatomic_t>

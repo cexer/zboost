@@ -146,14 +146,14 @@ public:
     virtual long sharedCountIncreaseWithLock()
     {
         QASSERT(m_sharedCount >= 0);
-        while (true)
+        long o = m_sharedCount;
+        while (o != 0)
         {
-            long o = m_sharedCount;
-            if (o == 0)
-                return 0;
+            long v = qatomicCompareAndExchange(&m_sharedCount, o, o + 1);
+            if (o == v)
+                return o + 1;
 
-            if (o == qatomicCompareAndExchange(&m_sharedCount, o, o + 1))
-                return m_sharedCount;
+            o = v;
         }
         return 0;
     }
@@ -162,13 +162,13 @@ public:
     {
         QASSERT(m_sharedCount > 0);
 
-        if (-- m_sharedCount == 0)
+        long v = (-- m_sharedCount);
+        if (v == 0)
         {
             dispose();
             watchedCountDecrease();
-            return 0;
         }
-        return m_sharedCount;
+        return v;
     }
 
     virtual long watchedCount() const
@@ -185,12 +185,10 @@ public:
     virtual long watchedCountDecrease()
     {
         QASSERT(m_watchedCount >= 0);
-        if (-- m_watchedCount == 0)
-        {
+        long v = (-- m_watchedCount);
+        if (v == 0)
             destroy();
-            return 0;
-        }
-        return m_watchedCount;
+        return v;
     }
 
     QAtomic m_sharedCount;

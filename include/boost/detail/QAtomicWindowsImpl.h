@@ -18,37 +18,33 @@
 ////////////////////////////////////////////////////////////////////////////
 
 
-typedef long qwinodows_atomic_t;
+typedef long qwindows_atomic_t;
 
 
-class QAtomicWindowsImpl
+inline static long qatomicFetch(const long* value)
 {
-public:
-	inline static long qatomicFetch(const long* value)
-	{
-		return *(volatile long*)value;
-	}
+	return *(volatile long*)value;
+}
 
-	inline static long qatomicStore(long* value, long newVal)
-	{
-		return InterlockedExchange((volatile long*)value, newVal);
-	}
+inline static long qatomicStore(long* value, long newVal)
+{
+	return InterlockedExchange((volatile long*)value, newVal);
+}
 
-	inline static long qatomicAdd(long* value, long addVal)
-	{
-		return InterlockedExchangeAdd((volatile long*)value, addVal) + addVal;
-	}
+inline static long qatomicAdd(long* value, long addVal)
+{
+	return InterlockedExchangeAdd((volatile long*)value, addVal) + addVal;
+}
 
-	inline static long qatomicSub(long* value, long subVal)
-	{
-		return InterlockedExchangeAdd((volatile long*)value, -subVal) - subVal;
-	}
+inline static long qatomicSub(long* value, long subVal)
+{
+	return InterlockedExchangeAdd((volatile long*)value, -subVal) - subVal;
+}
 
-	inline static long qatomicCompareAndExchange(long* value, long expected, long newVal)
-	{
-		return InterlockedCompareExchange((volatile long*)value, newVal, expected);
-	}
-};
+inline static long qatomicCompareAndExchange(long* value, long expected, long newVal)
+{
+	return InterlockedCompareExchange((volatile long*)value, newVal, expected);
+}
 
 
 
