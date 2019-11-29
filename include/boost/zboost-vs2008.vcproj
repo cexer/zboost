@@ -81,68 +81,6 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="dll-debug|x64"
-			OutputDirectory="..\..\lib\windows-x86_64"
-			IntermediateDirectory="..\..\tmp\x64\dll-debug\zboost"
-			ConfigurationType="4"
-			CharacterSet="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions="/MTd /Z7 /EHsc"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;_DEBUG;PRE_STATIC"
-				UsePrecompiledHeader="0"
-				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;_DEBUG;PRE_STATIC"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				AdditionalOptions="/NOLOGO"
-				OutputFile="$(OutDir)\zboost-d.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
 			Name="dll-release|Win32"
 			OutputDirectory="..\..\lib\windows-x86"
 			IntermediateDirectory="..\..\tmp\x32\dll-release\zboost"
@@ -178,68 +116,6 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;NDEBUG;PRE_STATIC"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				AdditionalOptions="/NOLOGO"
-				OutputFile="$(OutDir)\zboost.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="dll-release|x64"
-			OutputDirectory="..\..\lib\windows-x86_64"
-			IntermediateDirectory="..\..\tmp\x64\dll-release\zboost"
-			ConfigurationType="4"
-			CharacterSet="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions="/O2 /MT /EHsc"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;NDEBUG;PRE_STATIC"
-				UsePrecompiledHeader="0"
-				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;NDEBUG;PRE_STATIC"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -327,6 +203,191 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="lib-release|Win32"
+			OutputDirectory="..\..\lib\windows-x86"
+			IntermediateDirectory="..\..\tmp\x32\lib-release\zboost"
+			ConfigurationType="4"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/O2 /MT /EHsc"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;NDEBUG;PRE_STATIC"
+				UsePrecompiledHeader="0"
+				DebugInformationFormat="0"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;NDEBUG;PRE_STATIC"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalOptions="/NOLOGO"
+				OutputFile="$(OutDir)\zboost-s.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="dll-debug|x64"
+			OutputDirectory="..\..\lib\windows-x86_64"
+			IntermediateDirectory="..\..\tmp\x64\dll-debug\zboost"
+			ConfigurationType="4"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/MTd /Z7 /EHsc"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;_DEBUG;PRE_STATIC"
+				UsePrecompiledHeader="0"
+				DebugInformationFormat="0"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;_DEBUG;PRE_STATIC"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalOptions="/NOLOGO"
+				OutputFile="$(OutDir)\zboost-d.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="dll-release|x64"
+			OutputDirectory="..\..\lib\windows-x86_64"
+			IntermediateDirectory="..\..\tmp\x64\dll-release\zboost"
+			ConfigurationType="4"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/O2 /MT /EHsc"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;NDEBUG;PRE_STATIC"
+				UsePrecompiledHeader="0"
+				DebugInformationFormat="0"
+				CompileAs="0"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;_WIN64;WIN64;NDEBUG;PRE_STATIC"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalOptions="/NOLOGO"
+				OutputFile="$(OutDir)\zboost.lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
 			Name="lib-debug|x64"
 			OutputDirectory="..\..\lib\windows-x86_64"
 			IntermediateDirectory="..\..\tmp\x64\lib-debug\zboost"
@@ -371,67 +432,6 @@
 				Name="VCLibrarianTool"
 				AdditionalOptions="/NOLOGO"
 				OutputFile="$(OutDir)\zboost-sd.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="lib-release|Win32"
-			OutputDirectory="..\..\lib\windows-x86"
-			IntermediateDirectory="..\..\tmp\x32\lib-release\zboost"
-			ConfigurationType="4"
-			CharacterSet="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions="/O2 /MT /EHsc"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;NDEBUG;PRE_STATIC"
-				UsePrecompiledHeader="0"
-				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WIN32;WIN32;_ATL_XP_TARGETING;NDEBUG;PRE_STATIC"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				AdditionalOptions="/NOLOGO"
-				OutputFile="$(OutDir)\zboost-s.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -830,10 +830,6 @@
 		<Filter
 			Name="detail"
 			>
-			<File
-				RelativePath="detail\IAbstract.h"
-				>
-			</File>
 			<File
 				RelativePath="detail\QAssert.h"
 				>

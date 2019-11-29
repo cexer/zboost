@@ -9,7 +9,6 @@
 #include "detail/QBooleanable.h"
 #include "detail/QNoop.h"
 #include "detail/QPointerOf.h"
-#include "detail/IAbstract.h"
 #include <new>
 
 
@@ -42,7 +41,6 @@ namespace boost
 
 template<class T>
 class shared_ptr : public QValidCheckable< shared_ptr<T> >
-               , public IAbstract
 {
     typedef QNull (*NullPtr)(QNull);
 public:
