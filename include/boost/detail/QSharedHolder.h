@@ -287,7 +287,7 @@ public:
     {
         _Allocator a = m_a;
         this->~_This();
-        a.deallocate(this, sizeof(_This));
+        a.deallocate(this, 1);
     }
 
 protected:
@@ -330,7 +330,7 @@ public:
             m = _a.allocate(1, (Impl*)NULL);
             if (NULL == m)
                 throw std::bad_alloc();
-            new (m) Impl(p,d,a);
+            new (m) Impl(p,d,_a);
             m_holder = m;
         }
         catch (const std::exception& e)
@@ -341,7 +341,7 @@ public:
             d(p);
             if (NULL != m_holder)
             {
-                _a.deallocate(m, sizeof(Impl));
+                _a.deallocate(m, 1);
                 m = NULL;
             }
         }
